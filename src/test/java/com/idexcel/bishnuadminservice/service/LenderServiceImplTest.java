@@ -95,7 +95,7 @@ public class LenderServiceImplTest {
 
 	@Test
 	public void findAll() {
-		List lenderList = (List) service.findAll();
+		List<?> lenderList = (List<?>) service.findAll();
 		Assert.assertEquals("Employee list should match", lenders, lenderList);
 	}
 
