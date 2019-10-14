@@ -34,9 +34,9 @@ node {
 	    }
 	    
 	    stage('Deploy in AWS ECS'){
-            sh 'aws ecs update-service --region us-east-1 --cluster idexceldemo --service admin-service --force-new-deployment'
+            sh 'aws ecs update-service --region us-east-1 --cluster idexceldemo --service bishnu-admin-service --force-new-deployment'
        		sh 'sleep 30'
-       		sh 'aws ecs wait services-stable --region us-east-1 --cluster idexceldemo --service admin-service'
+       		sh 'aws ecs wait services-stable --region us-east-1 --cluster idexceldemo --service bishnu-admin-service'
        	}
 	} catch (Exception e) {
 		currentBuild.result = 'FAILURE'
