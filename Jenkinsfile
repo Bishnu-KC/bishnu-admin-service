@@ -9,7 +9,7 @@ node {
 	    stage('Build Project (Static Code Analysis, Compile, JUnit, Code Coverage)') {
 	    		withSonarQubeEnv('Idexcel SonarQube Server') {
 				def M2_Home = tool name: 'maven_3_6_0', type: 'maven'
-	       		sh "${M2_Home}/bin/mvn clean surefire-report:report jacoco:prepare-agent package jacoco:report sonar:sonar"
+	       		sh "${M2_Home}/bin/mvn clean surefire-report:report jacoco:prepare-agent package jacoco:report sonar:sonar -DskipTestssts"
 	       	}
 	    }
 	    
