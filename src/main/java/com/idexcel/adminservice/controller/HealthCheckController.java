@@ -13,7 +13,7 @@ public class HealthCheckController {
 	@ResponseStatus(code=HttpStatus.OK)
 	@GetMapping
 	public String checkHealth() {
-		return "Bishnu-Admin-Service is Up and running!!!";
+		return "Bishnu-Admin-Service is Updated and running!!!";
 	}
 
 }
